@@ -1,0 +1,169 @@
+.comments{
+  font-size: 14px;
+  float: right;
+  position: relative;
+  padding-right: 6px;
+}
+
+.comments .count{
+  background: #FFF;
+  font-size: 9px;
+  min-width: 10px;
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: -7px;
+  border-radius: 50%;
+  border: 1px solid #337ab7;
+  line-height: 11px;
+  font-weight: bolder;
+  padding: 1px 4px;
+}
+
+.comments .count{
+  text-decoration: none;
+}
+
+.comments[data-count="0"]{
+  color: #D4D4D4;
+}
+
+.comments[data-count="0"] .count{
+  display: none;
+}
+
+a.comments.single-comment{
+  margin: 4px;
+  line-height: normal;
+  width: auto;
+  font-size: 25px;
+  color: #8E8E8E;
+  margin-left: 10px;
+}
+
+a.comments.single-comment .count{
+  color: #337ab7;
+  bottom: -1px;
+  right: -12px;
+}
+
+#comment-modal{
+	background-color: #fff;
+	padding-right: 0 !important;
+  z-index: 999999;
+}
+
+#comment-modal .modal-dialog{
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+}
+
+#comment-modal .modal-dialog,
+#comment-modal .modal-content{
+	background: none;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+  border-radius: 0;
+	border: none;
+  margin: 0;
+  padding: 0;
+}
+
+#comment-modal .modal-content{
+  border-radius: 0;
+  height: 100%;
+}
+
+#comment-modal .modal-footer{
+  text-align: left;
+  padding: 0;
+}
+
+#comment-modal #title-comments{
+  margin-bottom: 15px;
+}
+
+#comment-modal .modal-footer ul{
+  list-style: none;
+}
+
+#comment-modal .modal-footer h3{
+  display: inline-block;
+}
+
+#comment-modal .modal-footer ul,
+#comment-modal .modal-header,
+#comment-modal .modal-body{
+  padding: 1% 5%;
+  margin: 0;
+}
+
+.modal-open .manager-wrapper .right{
+  overflow: hidden;
+}
+
+.wrapper-btn-comments{
+  padding: 10px 0;
+}
+
+.btn-comments{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#dropdownType{
+  width: 100%;
+  text-align: left;
+}
+
+.dropdown-type ul{
+	width: 100%;
+}
+
+#dropdownType div,
+.item-type div{
+	display: inline-block;
+	height: 10px;
+	width: 10px;
+}
+
+.caret.pull-right{
+  margin-top: 8px;
+}
+
+#dropdownType .btn-default,
+.item-type .btn-default{
+  border: 1px solid #EAEAEA;
+}
+
+.comment-list .panel-heading{
+  padding: 5px 10px 5px 10px;
+}
+
+.comment-list .panel-heading .pull-right{
+  text-align: right;
+  min-width: 170px;
+}
+
+.comment-list .panel-heading .pull-right .delete{
+	display: none;
+	color: #d9534f;
+}
+
+.comment-list .panel-heading .pull-right .delete .glyphicon-remove{
+	pointer-events: none;
+}
+
+.comment-list .panel-heading .pull-right:hover .delete{
+	display: block;
+}
+
+.comment-list .panel-heading .pull-right:hover .date{
+	display: none;
+}
+
+#modal-upload{
+  display: inline-block;
+  width: auto;
+}

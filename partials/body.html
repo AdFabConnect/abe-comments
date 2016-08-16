@@ -1,0 +1,60 @@
+<div class="modal fade" id="comment-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Comments for : <span class="page-name"></span></h4>
+      </div>
+      <div class="modal-body row">
+      	<div class="col-xs-12">
+          <p>New comments : </p> 
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <input type="text" id="title-comments" placeholder="message title" class="form-control" tabindex="0">
+        </div>
+        <div class="col-xs-12 col-md-6">
+        <div class="dropdown dropdown-type">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownType" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-value="default" tabindex="1">
+            <div class="btn-default"> </div> Default
+            <span class="caret pull-right"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownType">
+            <li>
+              <a href="#" data-value="default" class="item-type">
+                <div class="btn-default"> </div> Default
+              </a>
+            </li>
+            <li>
+              <a href="#" data-value="success" class="item-type">
+                <div class="btn-success"> </div> Improvement
+              </a>
+            </li>
+            <li>
+              <a href="#" data-value="warning" class="item-type">
+                <div class="btn-warning"> </div> Warning
+              </a>
+            </li>
+            <li>
+              <a href="#" data-value="danger" class="item-type">
+                <div class="btn-danger"> </div> Danger
+              </a>
+            </li>
+          </ul>
+        </div>
+        </div>
+        <div class="col-xs-12">
+          <textarea name="comments" id="content-comments" placeholder="message content" class="form-control" tabindex="2"></textarea>
+        </div>
+        <div class="col-xs-12">
+          <div class="text-right wrapper-btn-comments">
+            <a href="#" type="submit" class="btn btn-primary btn-comments" tabindex="3">send</a>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer"></div>
+    </div>
+  </div>
+</div>
+
+<script src="/comments.js"></script>
+<link rel="stylesheet" href="/comments.css" />
