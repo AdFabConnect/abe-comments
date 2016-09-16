@@ -1,5 +1,7 @@
 'use strict';
 
+var path = require('path');
+
 var hooks = {
   afterListPage: (res, file, index, text, abe) => {
   	var url = res.match(/file-path".*>((\r|\t|\n|.)*?)<\/a>/g)[0]
@@ -9,7 +11,7 @@ var hooks = {
     url = url.split('.')[0] + '.json'
 
     var count = 0;
-    var commentUrl = abe.fileUtils.concatPath(abe.config.root, 'comments', url)
+    var commentUrl = path.join(abe.config.root, 'comments', url)
     var commentJson = abe.FileParser.getJson(commentUrl, false)
     if(JSON.stringify(commentJson) !== '{}' && commentJson.length) count = commentJson.length
 

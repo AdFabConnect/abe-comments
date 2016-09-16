@@ -1,5 +1,6 @@
 'use strict';
 
+var path = require('path');
 var User;
 
 try{
@@ -16,9 +17,9 @@ var route = function route(req, res, next, abe) {
 	var realFilePath = req.query.filePath.replace('.json', '.' + abe.config.files.templates.extension)
 	var jsonPath = req.query.filePath.split('/')
 	var jsonFile = jsonPath.pop()
-	jsonPath = abe.fileUtils.concatPath(abe.config.root, commentsPath, jsonPath.join('/'))
+	jsonPath = path.join(abe.config.root, commentsPath, jsonPath.join('/'))
 	abe.folderUtils.createFolder(jsonPath)
-	jsonFile = abe.fileUtils.concatPath(jsonPath, jsonFile)
+	jsonFile = path.join(jsonPath, jsonFile)
 
 	switch(req.query.action){
 		case 'read': 
