@@ -18,7 +18,7 @@ var route = function route(req, res, next, abe) {
 	var jsonPath = req.query.filePath.split('/')
 	var jsonFile = jsonPath.pop()
 	jsonPath = path.join(abe.config.root, commentsPath, jsonPath.join('/'))
-	abe.folderUtils.createFolder(jsonPath)
+	abe.mkdirp(jsonPath)
 	jsonFile = path.join(jsonPath, jsonFile)
 
 	switch(req.query.action){
@@ -31,7 +31,7 @@ var route = function route(req, res, next, abe) {
 		break;
 		case 'write':
 			json = req.query.data ? JSON.parse(req.query.data) : []
-			abe.folderUtils.createFile(jsonFile, json)
+			abe.fse.writeJsonSync(jsonFile, json, { space: 2, encoding: 'utf-8' })
 		break;
 	}
 
