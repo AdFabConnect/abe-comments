@@ -12,7 +12,7 @@ var hooks = {
 
     var count = 0;
     var commentUrl = path.join(abe.config.root, 'comments', url)
-    var commentJson = abe.FileParser.getJson(commentUrl, false)
+    var commentJson = abe.cmsData.file.get(commentUrl, false)
     if(JSON.stringify(commentJson) !== '{}' && commentJson.length) count = commentJson.length
 
     url = '/plugin/abe-comments/comments?filePath=' + url

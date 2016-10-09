@@ -24,7 +24,7 @@ var route = function route(req, res, next, abe) {
 	switch(req.query.action){
 		case 'read': 
 			try{
-				var json = abe.FileParser.getJson(jsonFile, true)
+				var json = abe.cmsData.file.get(jsonFile, true)
 				if(JSON.stringify(json) === '{}') json = []
 			}
 			catch(e){ console.log(e) }
