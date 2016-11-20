@@ -1,0 +1,25 @@
+{
+  "name": "abe-comments",
+  "version": "1.0.0",
+  "description": "Add comments to Abe",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdFabConnect/abe-comments.git"
+  },
+  "keywords": [
+    "abe",
+    "plugin",
+    "cms",
+    "comments"
+  ],
+  "author": "Nicolas Labbé",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdFabConnect/abe-comments/issues"
+  },
+  "homepage": "https://github.com/AdFabConnect/abe-comments#readme"
+}
